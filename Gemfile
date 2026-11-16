@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 # gem "rails"
 
-gem "jekyll", "~> 4.4"
+gem "jekyll"
 gem "webrick", "~> 1.9"
 gem "jekyll-scholar"
 gem "jekyll-sitemap"
