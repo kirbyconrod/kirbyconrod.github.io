@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<h1 style="position: relative;">Research: {{ page.subtitle }} 
+	{% if page.tag != "all" %}<a style="font-weight: 100; 
+		font-size: var(--bs-body-font-size);"
+		href="/research/all">show all</a>
+	{% endif %}
+</h1>
+{{ content }}
+{% if page.tag == "all" %}
+{% bibliography %}
+{% else %}
+{% assign tag = page.tag %}
+{% assign query = "" | append: "@*[keywords~=" | append: tag | append: "]*" %}
+{% bibliography -q {{ query }} %}
+{% endif %}
+

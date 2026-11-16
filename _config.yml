@@ -1,0 +1,13 @@
+url: "https://kirbyconrod.com"
+plugins: ['jekyll/scholar', 'jekyll/jekyll-sitemap', 'jekyll-seo-tag']
+
+scholar:
+  style: ./assets/glossa_no_doi.csl
+  bibliography_template: bib
+  sort_by: year, name
+  order: descending, ascending
+  group_by: type
+  type_order: [thesis, article, inbook, techreport, inproceedings, misc]
+  type_names: {thesis: "Dissertation", article: "Articles", inbook: "Chapters", inproceedings: "Proceedings", techreport: "Working papers and commentary"}
+  repository: papers
+  bibtex_skip_fields: ["DOI", "abstract"]

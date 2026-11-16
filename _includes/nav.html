@@ -1,0 +1,68 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<div class="container-fluid">
+    <a class="navbar-brand" href="#">Professor Kirby Conrod</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+		<a class="nav-link {% if page.name == "index.md" -%}active{%- endif -%}" aria-current="page" href="/index.html">Home</a>
+        </li>
+        <li class="nav-item">
+  	  <a class="nav-link {% if page.name == "teaching.md" -%}active{%- endif -%}" aria-current="page" href="/teaching.html">Teaching</a>
+        </li>
+       <li class="nav-item dropdown">
+	       <a class="nav-link dropdown-toggle {% if page.dir == "/research/" -%}active{%- endif -%}" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Research</a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" href="/research/all.html">All</a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item" href="/research/syntax.html">Syntax</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="/research/socio.html">Sociolinguistics</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="/research/methodology.html">Methodology</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="/research/pragmatics.html">Pragmatics</a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item" href="/research/sg_they.html">Singular they</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="/research/trans_ling">Trans linguistics</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="/research/neopronouns">Neopronouns</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="/research/student_collab">Student collaborators</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="/research/teaching_and_learning">Teaching and learning</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+  	  <a class="nav-link {% if page.name == "public-facing.md" -%}active{%- endif -%}" aria-current="page" href="/public-facing.html">Public-facing work</a>
+        </li>
+        <li class="nav-item">
+  	  <a class="nav-link {% if page.name == "cv.md" -%}active{%- endif -%}" aria-current="page" href="/cv.html">CV</a>
+        </li>
+         <li class="nav-item">
+  	  <a class="nav-link {% if page.name == "contact.md" -%}active{%- endif -%}" aria-current="page" href="/contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+</div>
+</nav>

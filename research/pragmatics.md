@@ -1,0 +1,12 @@
+---
+layout: research
+tag: pragmatics
+subtitle: pragmatics
+---
+Pragmatics studies the social meaning of language: when it's appropriate to use
+it in a certain way, and what that way of using it implies. Different people
+have different ideas about pragmatics; my goal is not to decide which one is
+right, but to describe them as they are. 
+
+Pragmatics also affects research methods: to study a community, you need to talk
+to and about them in ways they find appropriate. 

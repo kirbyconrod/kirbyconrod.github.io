@@ -1,0 +1,41 @@
+---
+---
+<!-- _layouts/bib.html -->
+		{%- if link -%}
+		<a href="{{link}}">{{reference}}</a>
+		{%- elsif entry.link%}
+		<a href="{{entry.link}}">{{reference}}</a>
+		{%- elsif entry.doi%}
+		<a href="https://doi.org/{{entry.doi}}">{{reference}}</a>
+		{%- else -%}
+		{{reference}}
+		{%- endif -%}
+		<div class="controls">
+
+		{% assign keywords = entry.keywords | split: ", " %}
+		{% for keyword in keywords %}
+		<a class="tag" href="/research/{{ keyword | replace: " ", "_" }}">#{{ keyword }}</a>
+		{% endfor %}
+
+          <!-- Links/Buttons -->
+		<a class="toggle collapsed" data-bs-toggle="collapse" href="#toggle{{entry.key}}bib" role="button" aria-expanded="false" aria-controls="toggle{{entry.key}}bib">.bib</a>
+            {% if entry.abstract -%}
+	    <a class="toggle collapsed" data-bs-toggle="collapse" href="#toggle{{entry.key}}abstract" role="button" aria-expanded="false" aria-controls="toggle{{entry.key}}abstract">abstract</a>
+	    {% else -%}
+	    <span class="toggle collapsed text-white">abstract</span>
+            {%- endif -%}
+	  </div>
+          {%- if entry.abstract -%}
+	  <div class="collapse multi-collapse" id="toggle{{entry.key}}abstract">
+            <div class="card card-body mt-3">
+              {{entry.abstract}}
+            </div>
+          </div>
+          {%- endif -%}
+	  <div class="collapse multi-collapse" id="toggle{{entry.key}}bib">
+              <div class="card card-body mt-3">
+		 <pre>
+{{- entry.bibtex | strip -}}
+	         </pre>
+              </div>
+            </div>
